@@ -1,9 +1,9 @@
-(っ◔◡◔)っ
+(っ◔◡◔)っ 
 A C++ calculator that uses a **custom lexer**, a **recursive descent parser**, and builds an **Abstract Syntax Tree (AST)** to evaluate expressions with full operator precedence. No switch-case shortcuts.
 
 ---
 
-## ✂️ Lexer — `lexer.cpp`
+# Lexer — `lexer.cpp`
 
 Breaks input into tokens:
 - Numbers → `INT`, `FLOAT`
