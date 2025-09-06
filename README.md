@@ -28,3 +28,5 @@ pos 0
 4. baby class UaryExpr represents '-x' or '+x', we have op for -> '-,+',    then the 'x' it's operating on <-- RIGHT, Finally the type 'hey mesa unary'
 
 5. baby Binary is simply doing <left> <any-operator> <right> 
+
+<img width="1919" height="762" alt="image" src="https://github.com/user-attachments/assets/df6e29ca-a380-49f2-9bb0-7b01e30404a8" />
