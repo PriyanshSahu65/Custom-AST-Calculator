@@ -1,7 +1,5 @@
 (っ◔◡◔)っ
-# 🧮 Custom AST Cala
-
-A C++ calculator that uses a **custom lexer**, a **recursive descent parser**, and builds an **Abstract Syntax Tree (AST)** to evaluate expressions with full operator precedence. No switch-case shortcuts — just real parsing power.
+A C++ calculator that uses a **custom lexer**, a **recursive descent parser**, and builds an **Abstract Syntax Tree (AST)** to evaluate expressions with full operator precedence. No switch-case shortcuts.
 
 ---
 
