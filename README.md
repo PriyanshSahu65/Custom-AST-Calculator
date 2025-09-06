@@ -1,8 +1,8 @@
-Henlo!  
-&nbsp; &nbsp; &nbsp; ╱|、  
-&nbsp; &nbsp; (˚ˎ 。7  
-&nbsp; &nbsp; &nbsp; |、˜〵  
-&nbsp; &nbsp; &nbsp; じしˍ,)ノ  
+## Henlo! 
+        ╱|、
+      (˚ˎ 。7  
+       |、˜〵          
+       じしˍ,)ノ
 
 🧠 **This is my custom expression parser and evaluator built in C++ using a hand-crafted Abstract Syntax Tree (AST).**
 
