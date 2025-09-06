@@ -1,0 +1,7 @@
+# ninja log v6
+25	142	7788534702480587	CMakeFiles/calc.dir/src/logger.cpp.obj	d0e28d1076b75c8e
+19	784	7788534702405309	CMakeFiles/calc.dir/src/lexer.cpp.obj	e5d1026c42f9d8a
+12	853	7788534702343451	CMakeFiles/calc.dir/src/evaluator.cpp.obj	98cd2f4218ec850b
+33	1011	7788534702557764	CMakeFiles/calc.dir/src/main.cpp.obj	fbe53869484cebf8
+40	1094	7788534702625457	CMakeFiles/calc.dir/src/parser.cpp.obj	97f9d52d07928c31
+1094	1590	7788534713165345	bin/calc.exe	13519ecb5fbf8efe
