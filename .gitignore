@@ -1,12 +1,43 @@
-CMakeLists.txt.user
+# Build artifacts
+build/
+out/
+bin/
+*.exe
+*.obj
+*.o
+*.log
+*.tmp
+
+# CMake
+CMakeFiles/
 CMakeCache.txt
-CMakeFiles
-CMakeScripts
-Testing
+CMakeScripts/
 Makefile
 cmake_install.cmake
 install_manifest.txt
 compile_commands.json
 CTestTestfile.cmake
-_deps
 CMakeUserPresets.json
+_deps/
+Testing/
+
+# Visual Studio
+.vs/
+*.vcxproj*
+*.sln
+*.user
+*.opensdf
+*.sdf
+*.cache
+*.db
+CMakeLists.txt.user
+
+# IDE/editor junk
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# OS junk
+.DS_Store
+Thumbs.db
