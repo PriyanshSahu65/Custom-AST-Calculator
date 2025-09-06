@@ -76,6 +76,7 @@ void printAST(const Expr* expr) {
             std::cout << " " << bin->op.value << " ";
             printAST(bin->right.get());
             std::cout << ")";
+            
             break;
         }
     }
