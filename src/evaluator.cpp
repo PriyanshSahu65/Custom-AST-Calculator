@@ -1,43 +1,42 @@
 #include "evaluator.h"
-#include <cmath>
 #include <stdexcept>
+#include <cmath>
 
 double Evaluator::evaluate(const Expr* expr) {
-    switch (expr->type()) {
-        case ExprType::INT: {
-            auto* num = static_cast<const IntExpr*>(expr);
-            return std::stod(num->value);
-        }
-        case ExprType::FLOAT: {
-            auto* num = static_cast<const FloatExpr*>(expr);
-            return std::stod(num->value);
-        }
-        case ExprType::Unary: {
-            auto* unary = static_cast<const UnaryExpr*>(expr);
-            double val = evaluate(unary->right.get());
-            if (unary->op.type == TokenType::Minus) return -val;
-            if (unary->op.type == TokenType::plus) return val;
-            throw std::runtime_error("Unknown unary operator: " + unary->op.value);
-        }
-        case ExprType::Grouped: {
-            auto* group = static_cast<const GroupedExpr*>(expr);
-            return evaluate(group->expr.get());
-        }
-        case ExprType::Binary: {
-            auto* bin = static_cast<const BinaryExpr*>(expr);
-            double left = evaluate(bin->left.get());
-            double right = evaluate(bin->right.get());
+    if (auto intNode = dynamic_cast<const IntExpr*>(expr)) {
+        return std::stod(intNode->value);
+    }
 
-            switch (bin->op.type) {
-                case TokenType::plus: return left + right;
-                case TokenType::Minus: return left - right;
-                case TokenType::Multiply: return left * right;
-                case TokenType::Divide: return left / right;
-                case TokenType::Power: return std::pow(left, right);
-                default:
-                    throw std::runtime_error("Unknown binary operator: " + bin->op.value);
-            }
+    if (auto floatNode = dynamic_cast<const FloatExpr*>(expr)) {
+        return std::stod(floatNode->value);
+    }
+
+    if (auto binNode = dynamic_cast<const BinaryExpr*>(expr)) {
+        double left = evaluate(binNode->left.get());
+        double right = evaluate(binNode->right.get());
+
+        switch (binNode->op.type) {
+        case TokenType::plus:     return left + right;
+        case TokenType::Minus:    return left - right;
+        case TokenType::Multiply: return left * right;
+        case TokenType::Divide:   return left / right;
+        case TokenType::Power:    return std::pow(left, right);
+        default: throw std::runtime_error("cuh! unknown binary operator");
         }
     }
-    throw std::runtime_error("Unknown expression type");
+
+    if (auto unaryNode = dynamic_cast<const UnaryExpr*>(expr)) {
+        double val = evaluate(unaryNode->right.get());
+        switch (unaryNode->op.type) {
+        case TokenType::plus:  return val;
+        case TokenType::Minus: return -val;
+        default: throw std::runtime_error("cuh! unknown unary operator");
+        }
+    }
+
+    if (auto groupNode = dynamic_cast<const GroupedExpr*>(expr)) {
+        return evaluate(groupNode->expr.get());
+    }
+
+    throw std::runtime_error("cuh! unknown expression type");
 }

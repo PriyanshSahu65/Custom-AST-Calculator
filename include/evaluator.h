@@ -1,6 +1,9 @@
 #pragma once
-
+#include <memory>
+#include "lexer.h"
 #include "parser.h"
+
 class Evaluator {
-    double evaluate(const Expr* expr);
+public:
+    static double evaluate(const Expr* expr);
 };
