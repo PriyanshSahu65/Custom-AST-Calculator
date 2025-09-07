@@ -21,3 +21,4 @@ I focused heavily on keeping the code clean, modular, and expressive — while l
 This project is a learning-driven implementation meant to mimic how compilers and interpreters process syntax trees, with full control over parsing logic and evaluation flow.
 
 
+I'll write an indepth Docs on how this works in few weeks :)
